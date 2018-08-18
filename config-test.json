@@ -1,0 +1,31 @@
+{
+	"logger": {
+		"path": "./logs/"
+	},
+	"server": {
+		"session": {
+			"cookieSecret": "demoapi"
+		},
+		"CORS": {
+			"allowedHosts": [
+				"http://localhost:4200"
+			]
+		},
+		"bodyParser": {
+			"limit": "100mb"
+		},
+		"security": {
+			"emailSalt": "$2a$10$e.oPc.qgbyUcDAhZjK2Mhf"
+		},
+		"couchbase": {
+			"host": "couchbase://127.0.0.1",
+			"n1qlHost": [
+				"127.0.0.1:8093"
+			],
+			"buckets": {
+				"db": "demo"
+			},
+			"defaultBucket": "demo"
+		}
+	}
+}
